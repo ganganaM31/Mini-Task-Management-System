@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Task Management System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Mini Task Management System</h1>
+  </header>
+  <div id="status-message"></div>
+  <main class="container">
+    <section class="panel" id="task-panel">
+      <h2>Add a New Task</h2>
+      <form id="task-form">
+        <div>
+          <label for="task-title">Title</label>
+          <input id="task-title" name="title" type="text" placeholder="Enter task title" required />
+        </div>
+        <div>
+          <label for="task-description">Description</label>
+          <textarea id="task-description" name="description" placeholder="Enter task details"></textarea>
+        </div>
+        <div>
+          <label for="task-priority">Priority</label>
+          <select id="task-priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <button id="add-button" type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Search Tasks</h2>
+      <form id="search-form">
+        <div class="search-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M21 21l-4.35-4.35" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="11" cy="11" r="6" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <input id="search-text" type="text" placeholder="Search by title" />
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Task List</h2>
+      <div id="loading-indicator" class="loading" style="display: none;"><span class="dot"></span> Loading...</div>
+      <div id="task-list"></div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
