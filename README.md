@@ -1,4 +1,4 @@
-# Task Management System
+# Mini Task Management System
 
 A simple Task Management System with frontend and backend functionality.
 
